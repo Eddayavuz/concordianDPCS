@@ -31,11 +31,9 @@ while grade != -1:
     count += 1
     grade = int(input("enter grade "))
 
-if count > 0:
-    avg = total / count
-    print("average", avg)
-else:
-    print("no grades entered")
+avg = total / count # Do you see anything suspicious in this line?
+print("average", avg)
+
 
 
 # Let's write a function where we count the number of 't's in a sentence.
@@ -63,16 +61,17 @@ def look_up_item(shopping_list, new_item):
 
 print(look_up_item(["eraser", "pen", "ruler"], "ruler"))
 
-# Let's write a program to calculate the total score of a player in a game.
-# The user can enter up to 3 scores.
 # SENTINEL + COUNT CONTROLLED LOOP: while
+# A bubble tea can have up to 3 toppings. But the customer can type done to stop early.
+price = 4
+toppings = 0
 
-total_score = 0
-num_of_scores = 0
-score = int(input("enter score "))
-while score != -1 and num_of_scores < 3:
-    total_score += score
-    num_of_scores += 1
-    if num_of_scores < 3:
-        score = int(input("enter score "))
-print("total:", total_score)
+topping = input("Add a topping (or type done): ")
+while topping != "done" and toppings < 3:
+    toppings += 1
+    price += 1
+    print("Added", topping)
+    if toppings < 3:
+        topping = input("Add a topping (or type done): ")
+
+print("You ordered", toppings, "toppings. Total:", price)
