@@ -14,8 +14,7 @@ print("total:", sum_of_nums(5))
 sentence = "Concordian students are the best."
 def num_of_ts(sentence):
     count = 0
-    top = len(sentence)
-    for i in range(top):
+    for i in range(0, len(sentence)):
         if sentence[i] == "t":
             count += 1
     return count
