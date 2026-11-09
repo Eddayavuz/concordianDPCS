@@ -20,20 +20,22 @@ while grade != -1:
     count += 1
     grade = int(input("enter grade "))
 
-avg = total / count # Do you see anything suspicious in this line?
+avg = total / count
 print("average", avg)
 
 
 
 # SENTINEL + COUNT CONTROLLED LOOP: while
+# Let's write a program to update the price of a bubble tea based the number of toppings.
 # A bubble tea can have up to 3 toppings. But the customer can type done to stop early.
-price = 4
+# Each topping adds 10 to the price.
+price = 90
 toppings = 0
 
 topping = input("Add a topping (or type done): ")
 while topping != "done" and toppings < 3:
     toppings += 1
-    price += 1
+    price += 10
     print("Added", topping)
     if toppings < 3:
         topping = input("Add a topping (or type done): ")
